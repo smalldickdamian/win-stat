@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title><%= name %> v<%= version %></title>
+
+        <link rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1><%= name %></h1>
+            <p>Welcome to <%= name %>. There's nothing too <i>important</i> about this application, except it returns all of the available information about your computer and networking hardware.</p>
+
+            <h2><h2 style="color: orange;">Disclaimer</h2>
+            <p>The information that is displayed here, is never logged or stored <b>in any way.</b></p>
+
+            <h3>Your computer information</h3>
+            <ul>
+                <li><b>Hostname:</b> <%= os.hostname %></li>
+                <li><b>Operating System:</b> <%= os.platform %></li>
+                <li><b>Home directory:</b> <%= os.homedir %></li>
+                <li><b>Temporary directory:</b> <%= os.tmpdir %></li>
+                <li><b>Installed random access memory:</b> <%= os.totalmem %> bytes</li>
+                <li><b>Process random access memory usage:</b> <%= (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) %> MB</li>
+                <li><b>System uptime:</b> <%= os.uptime %></li>
+                <li><b>System central processing unit:</b> <%= os.cpus()[0].model %></li>
+                <li><b>System central processing unit cores:</b> <%= os.cpus().length %></li>
+                <li><b>System central processing unit usage:</b> <%= (process.cpuUsage().system / 1024 / 1024).toFixed(2) %>%</li>
+            </ul>
+
+        <!--
+            <h3>Your networking information</h3>
+            <ul>
+                <li><b>Internet protocol address:</b> <%= os.networkInterfaces().address %></li>
+                <li><b>Internet protocol family:</b> <%= os.networkInterfaces().family %></li>
+            </ul>
+        </div>
+        -->
+    </body>
+</html>
