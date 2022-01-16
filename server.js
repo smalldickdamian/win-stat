@@ -16,4 +16,4 @@ app.get("/", (req, res) => {
     });
 });
 
-app.listen(10000, () => console.log("Listening."));
+app.listen(3030, () => console.log("Listening."));
