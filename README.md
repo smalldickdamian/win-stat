@@ -1,3 +1,4 @@
+*This project runs on any operating system ideally such as macOS and Linux, but was only ever tested on Windows.*
 # Windows Statistics
 This is a simple web daemon that returns information about your Windows system.
 
